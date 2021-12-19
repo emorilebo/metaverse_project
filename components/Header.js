@@ -25,7 +25,6 @@ function Header() {
           </h1>
           <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
 
-          {/* Change username component */}
           <ChangeUsername />
         </div>
       </div>
