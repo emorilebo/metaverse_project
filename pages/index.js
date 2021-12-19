@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Login from "../components/Login";
+import { useMoralis } from "react-moralis";
 
 export default function Home() {
+  const { isAuthenticated } = useMoralis();
   const isAuthenticated = false;
   if (!isAuthenticated) return <Login />;
   return (
