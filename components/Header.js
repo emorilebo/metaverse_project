@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
+import ChangeUsername from "./ChangeUsername";
 
 function Header() {
   const { user } = useMoralis();
@@ -23,9 +24,9 @@ function Header() {
             Welcome to the CURIOUS EXPLORER METAVERSE
           </h1>
           <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
-          {/* Welcome Message */}
-          {/* Username */}
+
           {/* Change username component */}
+          <ChangeUsername />
         </div>
       </div>
     </div>
