@@ -1,6 +1,7 @@
 import { ByMoralis, useMoralis, useMoralisQuery } from "react-moralis";
 
 function Messages() {
+  const { user } = useMoralis();
   return (
     <div className="pb-56">
       <div className="my-5">
