@@ -10,6 +10,10 @@ function Messages() {
         />
       </div>
       <div>{/* Each Message */}</div>
+      <div>{/* SendMessage */}</div>
+      <div>
+        <p>You're up to date {user.getUsername()}!</p>
+      </div>
       <h1>I am the messages</h1>
     </div>
   );
