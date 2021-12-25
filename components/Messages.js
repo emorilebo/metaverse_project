@@ -9,6 +9,7 @@ function Messages() {
           style={{ marginLeft: "auto", marginRight: "auto" }}
         />
       </div>
+      <div>{/* Each Message */}</div>
       <h1>I am the messages</h1>
     </div>
   );
