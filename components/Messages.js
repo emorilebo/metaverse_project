@@ -1,4 +1,5 @@
 import { ByMoralis, useMoralis, useMoralisQuery } from "react-moralis";
+import SendMessage from "./SendMessage";
 
 function Messages() {
   const { user } = useMoralis();
@@ -11,7 +12,7 @@ function Messages() {
         />
       </div>
       <div>{/* Each Message */}</div>
-      <div>
+      <div className="flex justify-center">
         <SendMessage />
       </div>
       <div className="text-center text-gray-400 mt-5">

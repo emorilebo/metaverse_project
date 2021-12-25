@@ -1,8 +1,9 @@
 function SendMessage() {
   return (
-    <div>
-      <h1>Send Message</h1>
-    </div>
+    <form>
+      <input type="text" />
+      <button>Send</button>
+    </form>
   );
 }
 
