@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { ByMoralis, useMoralis, useMoralisQuery } from "react-moralis";
+import Message from "./Message";
 import SendMessage from "./SendMessage";
 
 //Only show messages from the last 15 minutes
