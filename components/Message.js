@@ -1,7 +1,10 @@
-function Message() {
+import { useMoralis } from "react-moralis";
+
+function Message({ message }) {
+  const { user } = useMoralis();
   return (
     <div>
-      <h1>Message</h1>
+      <p>{message.get("message")}</p>
     </div>
   );
 }
