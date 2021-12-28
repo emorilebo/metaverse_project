@@ -2,9 +2,26 @@ import { useRef } from "react";
 import { ByMoralis, useMoralis, useMoralisQuery } from "react-moralis";
 import SendMessage from "./SendMessage";
 
+//Only show messages from the last 15 minutes
+const MINS_DURATION = 15;
+
 function Messages() {
   const { user } = useMoralis();
   const endOfMessagesRef = useRef(null);
+  const { data, loading, error } = useMoralisQuery(
+    "Messages",
+    (query) =>
+      query
+        .ascending("createdAt")
+        .greaterThan(
+          "createdAt",
+          new Date(Date.now() - 1000 * 60 * MINS_DURATION)
+        ),
+    [],
+    {
+      live: true,
+    }
+  );
   return (
     <div className="pb-56">
       <div className="my-5">
@@ -13,7 +30,11 @@ function Messages() {
           style={{ marginLeft: "auto", marginRight: "auto" }}
         />
       </div>
-      <div>{/* Each Message */}</div>
+      <div>
+        {data.map((message) => (
+          <Message key={message.id} message={message} />
+        ))}
+      </div>
       <div className="flex justify-center">
         <SendMessage endOfMessagesRef={endOfMessagesRef} />
       </div>
