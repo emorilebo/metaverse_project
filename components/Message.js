@@ -11,7 +11,7 @@ function Message({ message }) {
         isUserMessage && "justify-end"
       }`}
     >
-      <div className="relative">
+      <div className="relative h-8 w-8 ${isUserMessage && 'order-last'}">
         <Avatar username={message.get("username")} />
       </div>
       <div
