@@ -26,7 +26,7 @@ function Message({ message }) {
         <p>{message.get("message")}</p>
       </div>
       {/* Timeago stamp */}
-      <TimeAgo />
+      <TimeAgo className={`text-[10px]`} datetime={message.createdAt} />
       <p
         className={`absolute -bottom-5 text-xs ${
           isUserMessage ? "text-pink-300" : "text-blue-400 px-0"
