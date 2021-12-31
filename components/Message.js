@@ -11,8 +11,8 @@ function Message({ message }) {
         isUserMessage && "justify-end"
       }`}
     >
-      <div>
-        <Avatar />
+      <div className="relative">
+        <Avatar username={message.get("username")} />
       </div>
       <div
         className={`flex space-x-4 p-3 rounded-lg ${
