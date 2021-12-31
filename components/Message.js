@@ -26,7 +26,7 @@ function Message({ message }) {
       {/* Timeago stamp */}
       <p
         className={`absolute -bottom-5 text-xs ${
-          isUserMessage ? "text-pink-300" : "text-blue-400"
+          isUserMessage ? "text-pink-300" : "text-blue-400 px-0"
         }`}
       >
         {message.get("username")}
