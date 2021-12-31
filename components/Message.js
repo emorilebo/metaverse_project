@@ -24,7 +24,7 @@ function Message({ message }) {
         <p>{message.get("message")}</p>
       </div>
       {/* Timeago stamp */}
-      <p>{message.get("username")}</p>
+      <p className={`absolute -bottom-5 text-xs`}>{message.get("username")}</p>
     </div>
   );
 }
