@@ -5,7 +5,11 @@ function Message({ message }) {
 
   const isUserMessage = message.get("ethAddress") === user.get("ethAddress");
   return (
-    <div className={`flex items-end`}>
+    <div
+      className={`flex items-end space-x-2 relative ${
+        isUserMessage && "justify-end"
+      }`}
+    >
       <div
         className={`flex space-x-4 p-3 rounded-lg ${
           isUserMessage
