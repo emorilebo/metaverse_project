@@ -1,4 +1,5 @@
 import { useMoralis } from "react-moralis";
+import Avatar from "./Avatar";
 
 function Message({ message }) {
   const { user } = useMoralis();
@@ -10,6 +11,9 @@ function Message({ message }) {
         isUserMessage && "justify-end"
       }`}
     >
+      <div>
+        <Avatar />
+      </div>
       <div
         className={`flex space-x-4 p-3 rounded-lg ${
           isUserMessage
