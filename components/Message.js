@@ -11,7 +11,7 @@ function Message({ message }) {
         isUserMessage && "justify-end"
       }`}
     >
-      <div className="relative h-8 w-8 ${isUserMessage && 'order-last'}">
+      <div className="relative h-8 w-8 ${isUserMessage && 'order-last ml-2'}">
         <Avatar username={message.get("username")} />
       </div>
       <div
@@ -23,6 +23,8 @@ function Message({ message }) {
       >
         <p>{message.get("message")}</p>
       </div>
+      {/* Timeago stamp */}
+      <p>{message.get("username")}</p>
     </div>
   );
 }
